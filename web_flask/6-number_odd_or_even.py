@@ -42,10 +42,8 @@ def render(number):
 
 
 @app.route('/number_odd_or_even/<int: integer>')
-def o_e(integer):
-    odd_even = "even" if (integer % 2 == 0) else "odd"
-    return render_template("6-number_odd_or_even.html", integer=integer,
-                           o_e=o_e)
+def odd_even(integer):
+    return render_template("6-number_odd_or_even.html", integer=integer)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
