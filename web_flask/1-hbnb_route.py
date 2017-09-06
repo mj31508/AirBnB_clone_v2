@@ -1,12 +1,15 @@
+#!/usr/bin/python3
 from flask import Flask
 """
 starting the flask application
 """
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def hbnb():
     return "Hello HBNB!"
+
 
 @app.route('/hbnb', strict_slashes=False)
 def non_hbnb():
