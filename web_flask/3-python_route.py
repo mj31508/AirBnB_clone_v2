@@ -29,9 +29,5 @@ def default(text="is cool"):
     return "Python {}".format(text)
 
 
-@app.route('/number/<int: num>', strict_slashes=False)
-def number(num):
-    return "{} is a number".format(num)
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
