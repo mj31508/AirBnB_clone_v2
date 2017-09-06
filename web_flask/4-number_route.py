@@ -21,6 +21,7 @@ def ctext(text):
     text = text.replace("_", " ")
     return "C {}".format(text)
 
+
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def default(text="is cool"):
@@ -28,7 +29,7 @@ def default(text="is cool"):
     return "Python {}".format(text)
 
 
-@app.route('/number/<int: num>', strict_slashes=False)
+@app.route('/number/<int:num>', strict_slashes=False)
 def number(num):
         return "{} is a number".format(num)
 
