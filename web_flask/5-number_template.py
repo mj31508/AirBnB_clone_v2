@@ -35,7 +35,7 @@ def default(text="is cool"):
 def number(num):
         return "{} is a number".format(num)
 
-@app.route('/number_template/<int: number>')
+@app.route('/number_template/<int:number>')
 def render(number):
     return render_template('5-number.html', number=number)
 
